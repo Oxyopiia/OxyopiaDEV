@@ -7,7 +7,7 @@ function selectChoice(choices) {
     if (!Array.isArray(choices)) return TypeError("Not an Array of Choices")
 
     let totalWeight = 0;
-    
+
     for (choice of choices) {
         if(!choice.weight) {
             choice.weight = 1
@@ -39,3 +39,23 @@ function selectChoice(choices) {
         counted += choice.weight
     }
 }
+
+
+/**
+ * 
+ * 
+ * TESTING ZONE
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
+
+
+let choices = [
+    { id: 1, weight: 5 },
+    { id: 2, weight: 5 }
+]
+
+selectChoice(choices)

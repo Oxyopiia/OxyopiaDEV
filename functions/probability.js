@@ -15,6 +15,7 @@ function selectChoice(choices) {
 
         if(choice.weight % 1 != 0) {
             choice.weight = Math.floor(choice.weight)
+            console.log(`\n\x1b[33mWARN > Weight must be integer (id: ${choice.id})\n\x1b[31mYour total weight can actually go over 100, it is purely proportional! So for decimal-like equivalents, consider multiplying your weights by 10 or 100 for expected effects.\n\x1b[0m`)
         }
 
         totalWeight += choice.weight
@@ -39,23 +40,3 @@ function selectChoice(choices) {
         counted += choice.weight
     }
 }
-
-
-/**
- * 
- * 
- * TESTING ZONE
- * 
- * 
- * 
- * 
- * 
- */
-
-
-let choices = [
-    { id: 1, weight: 5 },
-    { id: 2, weight: 5 }
-]
-
-selectChoice(choices)

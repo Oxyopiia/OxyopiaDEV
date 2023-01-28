@@ -4,18 +4,21 @@
  * @returns {object} Chosen element from the pool of choices
  */
 function selectChoice(choices) {
-    if (!Array.isArray(choices)) return TypeError("Not an Array of Choices")
+    if (!Array.isArray(choices)) return TypeError("Not an array of choices")
 
     let totalWeight = 0;
 
     for (choice of choices) {
+        if(!choice.id) {
+            return ReferenceError(`Choice does not have id`)
+        }
+
         if(!choice.weight) {
             choice.weight = 1
         }
 
         if(choice.weight % 1 != 0) {
-            choice.weight = Math.floor(choice.weight)
-            console.log(`\n\x1b[33mWARN > Weight must be integer (id: ${choice.id})\n\x1b[31mYour total weight can actually go over 100, it is purely proportional! So for decimal-like equivalents, consider multiplying your weights by 10 or 100 for expected effects.\n\x1b[0m`)
+            return TypeError(`${choice.id} weight is not integer (weight is proportional, just multiply all values by 10 or 100, they don't have to add to 100)`)
         }
 
         totalWeight += choice.weight
@@ -40,3 +43,9 @@ function selectChoice(choices) {
         counted += choice.weight
     }
 }
+
+
+
+
+
+

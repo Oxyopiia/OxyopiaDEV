@@ -11,15 +11,18 @@
     <title>OxyopiaDEV</title>
     
     <style>
-		  .expandable .content {
-		    max-height: 0;
-		    overflow: hidden;
-		    transition: max-height 0.5s ease-out;
-		  }
+			.expandable {
+				border: 1px solid black	
+			}
+			
+			.expandable .content {
+				max-height: 0;
+				overflow: hidden;
+			}
 
-		  .expandable.expanded .content {
-		    max-height: 1000px;
-		  }
+			.expandable.expanded .content {
+				max-height: 1000px;
+			}
     </style>
   </head>
   <body>
@@ -27,9 +30,9 @@
     <p>DoomLegends clan information - useful if you are confused or just interested in the system!</p>
     
     <div class="expandable">
-		  <h2 style="color:blue">Click to toggle Table of Contents</h2>
-		  <p class="content">TOC coming soon :(</p>
-	  </div>
+			<h2 style="color:blue">Click to toggle Table of Contents</h2>
+			<p class="content">TOC coming soon :(</p>
+		</div>
     
     <h3>Creating/Managing a Clan</h3>
     <p>
@@ -96,10 +99,10 @@
       
       
     <script>
-		  const expandable = document.querySelector('.expandable');
-		    expandable.addEventListener('click', function() {
-          expandable.classList.toggle('expanded');
-        });
+			const expandable = document.querySelector('.expandable');
+			expandable.addEventListener('click', function() {
+				expandable.classList.toggle('expanded');
+			});
 	</script>
   </body>
 </html>

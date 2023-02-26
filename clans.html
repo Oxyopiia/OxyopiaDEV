@@ -9,9 +9,28 @@
     <meta property="og:description" content="Information for clans on Doomlegends (purely in development - may not be complete!) ">
     <meta property="og:image" content="https://cdn.discordapp.com/icons/1049088989480632350/7abd6c9e5810c91e0d846c1ea8e4d733.png?size=256">
     <title>OxyopiaDEV</title>
+    
+    <style>
+		  .expandable .content {
+		    max-height: 0;
+		    overflow: hidden;
+		    transition: max-height 0.5s ease-out;
+		  }
+
+		  .expandable.expanded .content {
+		    max-height: 1000px;
+		  }
+    </style>
   </head>
   <body>
     <h1>DoomLegends Clans</h1>
+    <p>DoomLegends clan information - useful if you are confused or just interested in the system!</p>
+    
+    <div class="expandable">
+		  <h2 style="color:blue">Click to toggle Table of Contents</h2>
+		  <p class="content">TOC coming soon :(</p>
+	  </div>
+    
     <h3>Creating/Managing a Clan</h3>
     <p>
       You can create a Clan in the /clans menu for $25,000 by clicking the emerald icon.<br />
@@ -20,7 +39,7 @@
     </p>
     <h3>Clan Tokens and Other Stats</h3>
     <p>
-      Clan Level is the Level of your clan, which can be upgraded after passing multiple requirements, such as Total Clan Points, Reputation, and more!
+      Clan Level is the Level of your clan, which can be upgraded after passing multiple requirements, such as Total Clan Points, Reputation, and more!<br />
       Clan Tokens are the main currency used in Clans. Each kill a Clan member gets gives 1 Clan Token towards the Clan. These can be spent in many shops, including the Upgrade Shop, Boosters, Clan Icons and more!<br />
       Reputation is a measure of kills-to-deaths in your Clan, and is a good way of gauging the skill level of your clan. This is not the same as a kill-to-death-<b>ratio</b>, and is instead the total number of (kills - deaths). This stat is capped at -500 and 500 either side.<br />
       Rating: <i>see 'Clan Rating' section below</i>
@@ -73,5 +92,14 @@
       • Prices for various things<br />
       • Balancing<br />
       • Some secret features...
+      
+      
+      
+    <script>
+		  const expandable = document.querySelector('.expandable');
+		    expandable.addEventListener('click', function() {
+          expandable.classList.toggle('expanded');
+        });
+	</script>
   </body>
 </html>

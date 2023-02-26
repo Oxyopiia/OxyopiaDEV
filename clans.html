@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>OxyopiaDEV</title>
-    
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   </head>
   <body>
     <h1>DoomLegends Clans</h1>
@@ -18,16 +16,46 @@
     </p>
     <h3>Clan Tokens and Other Stats</h3>
     <p>
+      Clan Level is the Level of your clan, which can be upgraded after passing multiple requirements, such as Total Clan Points, Reputation, and more!
       Clan Tokens are the main currency used in Clans. Each kill a Clan member gets gives 1 Clan Token towards the Clan. These can be spent in many shops, including the Upgrade Shop, Boosters, Clan Icons and more!<br />
-      
-      Reputation is a measure of kills-to-deaths in your Clan, and is a good way of gauging the skill level of your clan. This is not the same as a kill-to-death-<b>ratio</b>, and is instead the total number of \(kills - deaths\)
+      Reputation is a measure of kills-to-deaths in your Clan, and is a good way of gauging the skill level of your clan. This is not the same as a kill-to-death-<b>ratio</b>, and is instead the total number of (kills - deaths). This stat is capped at -500 and 500 either side.<br />
+      Rating: <i>see 'Clan Rating' section below</i>
+    <h3>Clan Level</h3>
+    <p>
+      Not much has been developed for this mechanic, however each Level unlocks the capability for new things, such as Clan Icons, Banner Patterns, Upgrades, Boosters and more!
+    </p>
     <h3>Clan Rating</h3>
     <p>
       Clan Rating is a <b>general</b> basis on how good your Clan is, and allows you to compare your Clan against others. Rating is a combination of:<br />
-        • Clan Tokens<br />
-        • Average Clan Member KD (this is scaled up a bit, and does show your actual avg KD)<br />
-        • Reputation<br />
-        • Clan Level
+        • Clan Tokens (cap: 4)<br />
+        • Average Clan Member KD (this is scaled up a bit, and does show your actual avg KD; cap: 5)<br />
+        • Reputation (cap: 4)<br />
+        • Clan Level (cap: 2)
+    </p>
+    <h5>Clan Rating: Calculations</h5>
+    <p>
+      Clan Tokens Rating = 0.055(tokens^0.55)<br />
+      Average Clan Members KD Rating = total kd / members * 1.667<br />
+      Reputation Rating = 0.11225(reputation^0.575)<br />
+      Level Rating = level / 7.5
+    </p>
+    <h3>Clans Competitive</h3>
+    <p>
+       Clans Competitive adds a competitive nature to the Clans system, by allowing you to go against other Clans and recieve rewards for doing so.<br /><br />
+       Not much has been developed for this mechanic so far, and many things are unfinished here.
+    </p>
+    <h3>Clan Icons</h3>
+    <p>
+      Each Clan starts off with an Oak Sign as their Clan Icon, however, each Clan can purchase a numerous amount of Minecraft Blocks that they can use as their Clan Icon, allowing them to vary in the Clans Menu.
+    </p>
+    <h5>Clan Icons: Banner Patterns</h5>
+    <p>
+      Once passing Clan Level V (5), a Clan can use Banner patterns as their Clan Icon. They can buy Banner Patterns, Dyes and Banner Bases from a Banner Shop for Clan Points.
+    </p>
+    <h3>Scrapped Features</h3>
+    <p>
+      • Clan Vault - <i>removed as there is no need for this and it would just allow item sharing effectively</i><br />
+      • Clan Leaderboards - <i>would've been intensive on the server's performance. may be implemented in a different form</i>
     </p>
   </body>
 </html>

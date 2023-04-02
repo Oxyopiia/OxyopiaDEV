@@ -51,5 +51,3 @@ function selectChoice(choices, returnData) {
         counted += choice.weight
     }
 }
-
-
